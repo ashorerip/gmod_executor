@@ -4,8 +4,6 @@
 namespace gmod {
 	bool get_gmod();
 	DWORD process_id = 0;
-
-	bool injected = false;
 }
 
 bool gmod::get_gmod() {
@@ -19,12 +17,14 @@ bool gmod::get_gmod() {
 	if (!Process32First(snapshot, &process_entry)) {
 		CloseHandle(snapshot);
 
-		return 1;
+		return false;
 	}
 
 	do {
 		if (strncmp(process_entry.szExeFile, "gmod.exe", strlen(process_entry.szExeFile)) == 0) {
 			gmod::process_id = process_entry.th32ProcessID;
+
+			CloseHandle(snapshot);
 
 			return true;
 		}
