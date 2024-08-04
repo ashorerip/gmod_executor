@@ -7,13 +7,12 @@ constexpr auto PORT = 8012;
 #include <thread>
 
 // lib
-#include <safetyhook.hpp>
 #include <httplib/httplib.h>
 
 // own
 #include <sdk/get_interface.hpp>
-#include <sdk/CLuaShared.hpp>
-#include <sdk/CLuaInterface.hpp>
+#include <sdk/lua_shared.hpp>
+#include <sdk/lua_interface.hpp>
 
 void dll_thread(HINSTANCE instance_dll) {
 	DisableThreadLibraryCalls(instance_dll);

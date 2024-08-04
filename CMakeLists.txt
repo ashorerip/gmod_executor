@@ -11,14 +11,14 @@ include_directories(include/)
 include(FetchContent)
 
 # safetyhook
-set(SAFETYHOOK_FETCH_ZYDIS ON)
-FetchContent_Declare(
-    safetyhook
-    GIT_REPOSITORY "https://github.com/cursey/safetyhook.git"
-    GIT_TAG "origin/main"
-)
+#set(SAFETYHOOK_FETCH_ZYDIS ON)
+#FetchContent_Declare(
+#    safetyhook
+#    GIT_REPOSITORY "https://github.com/cursey/safetyhook.git"
+#    GIT_TAG "origin/main"
+#)
 
-target_link_libraries(dll safetyhook::safetyhook)
+#target_link_libraries(dll safetyhook::safetyhook)
 #
 
 # imgui
@@ -29,7 +29,8 @@ FetchContent_Declare(
 )
 #
 
-FetchContent_MakeAvailable(safetyhook imgui)
+#FetchContent_MakeAvailable(safetyhook)
+FetchContent_MakeAvailable(imgui)
 
 # compiler stuff
 set_property(TARGET dll PROPERTY CXX_STANDARD 23)

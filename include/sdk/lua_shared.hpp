@@ -1,6 +1,6 @@
 #pragma once
 
-#include <sdk/CLuaInterface.hpp>
+#include <sdk/lua_interface.hpp>
 
 struct CLuaShared {
 	virtual void destructor() = 0;
