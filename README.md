@@ -14,3 +14,4 @@ A project for getting started with learning reverse engineering and game hacking
 ## To do
 1. Switch to Dear ImGui
 2. Add custom environment functions
+3. Make the injector codebase better
