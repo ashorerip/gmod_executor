@@ -22,12 +22,12 @@ struct CLuaInterface {
 	virtual void set_metatable(int index) = 0;
 	virtual bool get_metatable(int index) = 0;
 	virtual void call(int argument_amount, int result_amount) = 0;
-	virtual int	pcall(int argument_amount, int result_amount, int error_function) = 0;
-	virtual int	equal(int a_index, int b_index) = 0;
-	virtual int	raw_equal(int a_index, int b_index) = 0;
+	virtual int pcall(int argument_amount, int result_amount, int error_function) = 0;
+	virtual int equal(int a_index, int b_index) = 0;
+	virtual int raw_equal(int a_index, int b_index) = 0;
 	virtual void insert(int index) = 0;
 	virtual void remove(int index) = 0;
-	virtual int	next(int index) = 0;
+	virtual int next(int index) = 0;
 	virtual void* new_userdata(unsigned int size) = 0;
 	virtual void throw_error(const char* error_string) = 0;
 	virtual void check_type(int index, int type) = 0;
